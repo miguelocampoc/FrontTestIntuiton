@@ -1,0 +1,16 @@
+button.btn.btn-primary.mb-2 {
+    background-color: #6f42c1;
+}
+
+.fondo-derecha{
+    background-color: white;
+    background-size: cover;
+    height: 100vh;
+    padding-right: 5%;
+    padding-left: 5%;
+   
+}
+span{
+    color:red;
+    
+}

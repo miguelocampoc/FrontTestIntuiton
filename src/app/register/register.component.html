@@ -1,0 +1,120 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-4 col-md-4 col-sm-12">
+
+        </div>
+        <div class="col-xl-8 col-md-8 col-sm-12 fondo-derecha">
+            <div class="row">
+                <div class="row mt-5">
+                    <h5>Registrate a Weplot </h5>
+                </div>
+                <div class="row ">
+                    <div class="col-xl-6">
+                        <div class="form-group">
+                            <label for="firstName" class="mb-2">Nombre:</label>
+                            <input type="text" class="form-control mb-2" id="firstName" name="firstName"
+                                [(ngModel)]="formData.firstName">
+                            <span *ngIf="errors">{{errors.nombre}}</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email mb-2" class="mb-2">Email:</label>
+                            <input type="email" class="form-control mb-2" id="email" name="email"
+                                [(ngModel)]="formData.email">
+                            <span *ngIf="errors">{{errors.email}}</span>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="form-group">
+                            <label for="lastName" class="mb-2">Apellido:</label>
+                            <input type="text" class="form-control mb-2" id="lastName" name="lastName"
+                                [(ngModel)]="formData.lastName">
+                            <span *ngIf="errors">{{errors.apellido}}</span>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="mb-2">Teléfono:</label>
+                            <input type="text" class="form-control mb-2" id="phone" name="phone"
+                                [(ngModel)]="formData.phone">
+                            <span *ngIf="errors">{{errors.telefono}}</span>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="form-group">
+                            <label for="country" class="mb-2">País:</label>
+                            <input type="text" class="form-control mb-2" id="country" name="country"
+                                [(ngModel)]="formData.country">
+                            <span *ngIf="errors">{{errors.pais}}</span>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="form-group">
+                            <label for="pregunta" class="mb-2">{{preguntas[0].titulo}}</label>
+                            <input type="text" class="form-control mb-2" id="respuesta[0]" name="respuesta[0]"
+                                [(ngModel)]="preguntas[0].respuesta">
+                        </div>
+                        <div class="form-group">
+                            <label for="pregunta" class="mb-2">{{preguntas[2].titulo}}</label>
+                            <input type="text" class="form-control mb-2" id="respuesta[2]" name="respuesta[2]"
+                                [(ngModel)]="preguntas[2].respuesta">
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="mb-2">Contraseña:</label>
+                            <input type="password" class="form-control mb-2" id="password" name="password"
+                                [(ngModel)]="formData.password">
+                            <span *ngIf="errors">{{errors.password}}</span>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="form-group">
+                            <label for="pregunta" class="mb-2">{{preguntas[1].titulo}}</label>
+                            <input type="text" class="form-control mb-2" id="respuesta[1]" name="respuesta[1]"
+                                [(ngModel)]="preguntas[1].respuesta">
+                        </div>
+                        <div class="form-group">
+                            <label for="pregunta" class="mb-2">{{preguntas[3].titulo}}</label>
+                            <input type="text" class="form-control mb-2" id="respuesta[3]" name="respuesta[3]"
+                                [(ngModel)]="preguntas[3].respuesta">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password" class="mb-2">Confirmar Contraseña:</label>
+                            <input type="password" class="form-control mb-2" id="cpassword" name="cpassword"
+                                [(ngModel)]="formData.cpassword">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="form-group">
+                            <label for="password" class="mb-2">Foto de perfil:</label>
+                            <input type="file" (change)="enviarImagen($event)" class="form-control mb-2" id="fileImage"
+                                name="fileImage">
+                            <span *ngIf="errors">{{errors.file}}</span>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <button type="submit" (click)="Guardar()" class="btn btn-primary mb-2">Unirme a Weplot</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <p>¿Ya tienes cuenta?<a routerLink="/login"> Inicia Sesion aqui</a></p>
+
+                </div>
+                <!--fin formulario-->
+            </div>
+
+        </div>
+    </div>
+
+</div>

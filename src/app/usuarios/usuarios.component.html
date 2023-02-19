@@ -1,0 +1,60 @@
+<app-menu></app-menu>
+
+<div class="container-fluid"><br><br><br>
+<div class="card">
+  <div class="card-header">
+    <h5>Ver Usuarios</h5>
+  </div>
+    <div class="card-body">
+      <div class="row">
+
+        <div class="col-xl-9">
+          <div class="table-responsive">
+
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">id</th>
+                  <th scope="col">nombre</th>
+                  <th scope="col">apellido</th>
+                  <th scope="col">pais</th>
+                  <th scope="col">email</th>
+                  <th scope="col">telefono</th>
+                  <th scope="col">Opciones</th>
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let usuario of usuarios; let i=index">
+                  <td>{{i}}</td>
+                  <td>{{usuario.nombre}}</td>
+                  <td>{{usuario.apellido}}</td>
+                  <td>{{usuario.pais}}</td>
+                  <td>{{usuario.email}}</td>
+                  <td>{{usuario.telefono}}</td>
+                  <td><button type="button" class="btn btn-primary" (click)="moreInfo(i)">Ver preguntas y foto</button>
+                  </td>
+
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+        <div class="col-xl-3">
+
+          <label>Foto de perfil</label><br>
+          <img [src]="imagen_usuario" height="100px"><br>
+          <label>preguntas:</label><br>
+          <div *ngFor="let pregunta of preguntas_usuario">
+            <label for="titulo"> {{pregunta.titulo}}</label><br>
+            <label for="respuesta"> {{pregunta.respuesta}}</label><br>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
